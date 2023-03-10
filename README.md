@@ -1,2 +1,3 @@
 # MLcourse_personality
-This repo contains the following subjects: ETL, descriptive analysis and clustering
+This repo contains the following subjects: ETL and clustering
+test
