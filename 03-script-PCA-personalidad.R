@@ -1,4 +1,5 @@
 library(ggcorrplot)
+library(FactoMineR)
 
 # En este tema vamos a hacer uso del DF6 como base
 # Paso previo: Correlaciones ----
@@ -26,4 +27,36 @@ ggplotly(
           panel.grid.major.x = element_blank())
   
 )
+
+
+# PCA: Principal Components Analysis ----
+
+## Dimensión: Extroversión ----
+
+# Definiendo el vector con las frases
+extroversion <- frases3[c(8,20,23)]
+
+# Creando la dimensión
+PCA.extroversion <- FactoMineR::PCA(X = DF6 %>%
+                                      select(all_of(extroversion)),
+                                    ncp = 1)
+
+# Eigenvalues y varianza explicada
+PCA.extroversion$eig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
